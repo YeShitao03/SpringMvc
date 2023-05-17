@@ -43,8 +43,8 @@ public class LoginCheckFilter implements Filter {
             return;
         }
 
-        if(request.getSession().getAttribute("userName")!=null){
-            System.out.println("用户已登录，用户id为：{"+request.getSession().getAttribute("userName")+"}");
+        if(request.getSession().getAttribute("user")!=null){
+            System.out.println("用户已登录，用户id为：{"+request.getSession().getAttribute("user")+"}");
             filterChain.doFilter(request,response);
             return;
         }
